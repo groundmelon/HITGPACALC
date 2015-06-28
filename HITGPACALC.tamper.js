@@ -14,7 +14,7 @@ var str=document.body.innerHTML;
 var a,kc,n,xf,fs,l,kch;
 var tempstr="";
 var mysite="https://rawhit.com/groundmelon/HITGPACALC/blob/master/";
-var mysite1="https://github.com/groundmelon/HITGPACALC/blob/master/index.html";
+var mysite1="https://github.com/groundmelon/HITGPACALC";
 var chky="1";
 var chkn="0";
 var XIAOWAICHAXUN="http://jwc.hit.edu.cn/students/xwcx.asp";
