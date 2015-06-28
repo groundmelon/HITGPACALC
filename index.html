@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>哈工大在线学分绩计算器</title>
+    
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=682225" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+	var bds_config = {'bdText':'手动计算学分绩太烦？放下计算器，只需登录教务处查分网站，学分绩自动帮你算！'};
+	document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + new Date().getHours();
+</script>
+</head>
+
+<body>
+<div id="main" style="margin:auto; text-align:left; line-height:150%">	
+    <h1 align="center">欢迎使用哈工大在线学分绩计算器 v1.6</h1>
+   	<p align="right">by 4系地瓜&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:GroundMelon@gmail.com">GroundMelon@gmail.com</a></p>
+    <div style="float:right;">
+        <div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+        <span class="bds_more">分享到：</span>
+        <a class="bds_renren"></a>
+        <a class="bds_tsina"></a>
+        <a class="bds_qzone"></a>
+		<a class="shareCount"></a>
+    </div>
+    </div>
+    <p>&nbsp;&nbsp;</p>
+    <p align="center">支持&nbsp;<strong><em>校内、校外查询</em></strong>&nbsp;！&nbsp;&nbsp;&nbsp;&nbsp;推荐使用Chrome/Firefox/Opera浏览器</p>
+    <p align="left" style="text-indent:2em">这个脚本的原理是利用正则表达式抓取html文件里的信息，一切行为都在你自己的电脑里完成，不会泄露你的隐私，欢迎查阅脚本源代码。</p>
+    
+    <div style="background-color:#C6FFFF; border:5px solid; border-color:#C6FFFF">
+        <p>Chrome / Chromium / 类Chrome浏览器 ：</p>
+      <p style="text-indent:2em">请访问<a href="https://chrome.google.com/webstore/detail/dhdgffkkebhmkfjojejmpbldmpobfkfo" target="_blank">https://chrome.google.com/webstore/detail/dhdgffkkebhmkfjojejmpbldmpobfkfo</a>，安装此扩展（或去Chrome Web Store搜索并下载tampermonkey）。扩展安装完毕后，请访问<a href="https://greasyfork.org/scripts/2367-hitgpacalc" target="_blank">https://greasyfork.org/scripts/2367-hitgpacalc</a>,点击左上角的Install，对话框选择确定，安装完毕后即可。</p>
+      <p style="text-indent:2em">访问教务处查分的网页，会在网页右侧自动弹出一个计算学分绩的框，选择要计算的课程后点击“计算学分绩”按钮即可。点击“关闭学分绩计算器”按钮则可以关闭它。刷新后界面会重新出现。如果出错请发E-mail或留言联系我。</p>
+    </div>
+    <div style="background-color:#FFFF95; border:5px solid; border-color:#FFFF95">
+        <p>Firefox：</p>
+        <p style="text-indent:2em">首先，请去附加组件管理器，在左上角搜索Greasemonkey或点击“所有扩展”后在网页中搜索Greasemonkey，安装这个插件。安装毕后访问<a href="https://greasyfork.org/scripts/2367-hitgpacalc" target="_blank">https://greasyfork.org/scripts/2367-hitgpacalc</a>,点击左上角的Install,安装完毕后即可。</p>
+        <p style="text-align:left; text-indent:2em">把脚本安装完毕后，访问教务处查分的网页，会在网页右侧自动弹出一个计算学分绩的框，选择要计算的课程后点击"计算学分绩"按钮即可。点击"关闭学分绩计算器"按钮则可以关闭它。刷新后界面会重新出现。如果出错请发E-mail或留言联系我。</p>
+    </div>
+    <div style="background-color:#FAA; border:5px solid; border-color:#FAA">
+    	<p>Opera：</p>
+        <p style="text-indent:2em">访问<a href="https://greasyfork.org/scripts/2367-hitgpacalc" target="_blank">https://greasyfork.org/scripts/2367-hitgpacalc</a>,点击左上角的Install，下载这个文件，将其保存在opera的自定义js目录里或者是自己选择一个目录。打开opera,依次点击工具 > 选项 > 高级 > 内容 > JavaScript 选项，选择你刚才保存文件的路径。</p>
+        <p style="text-align:left; text-indent:2em">以上设置完成后，访问教务处查分的网页，会在网页右侧自动弹出一个计算学分绩的框，选择要计算的课程后点击"计算学分绩"按钮即可。点击"关闭学分绩计算器"按钮则可以关闭它。刷新后界面会重新出现。如果出错请发E-mail或留言联系我。</p>
+    </div>
+    <div style="background-color:#F5F5F5; border:5px solid; border-color:#F5F5F5">
+    	<p>IE7.0及以上：（<em style="color:#F00"><strong>强烈</strong></em>不推荐使用IE浏览器加载此用户脚本，不但操作麻烦，而且容易出BUG）</p>
+        <p>（注：本人已经放弃对IE的支持，以下方法不保证有效）</p>
+        <p style="text-indent:2em">第一种方法（优先选用）：</p>
+        <p style="text-indent:2em">请下载IE7Pro并安装（也支持IE8 IE9，注意安装过程的广告，此软件2年没有更新了，可能会有意想不到的问题）&nbsp;&nbsp;<a href="http://dl.pconline.com.cn/html_2/1/107/id=41517&pn=0.html" target="_blank">下载地址</a>&nbsp;&nbsp;</p>
+        <p style="text-indent:2em">IE7Pro安装完成后，请访问<a href="https://greasyfork.org/scripts/2367-hitgpacalc" target="_blank">https://greasyfork.org/scripts/2367-hitgpacalc</a>,点击左上角的Install，下载这个文件，将其保存在C:\Program Files\IEPro\userscripts文件夹下，<em style="color:#F00"><strong>保存时将文件名重命名为HITGPACALC.ieuser.js（非常重要！！！）</strong></em>。打开IE浏览器，启用IE7Pro加载项，点击工具>IE7Pro Preferences（IE7Pro设置）（若找不到工具按钮请按一下alt键即可找到）,打开IE7Pro的设置界面，在左侧选择用户脚本，在右侧勾选启用用户脚本，同时在HITGPACALC上打勾，点击确定。</p>
+        <p style="text-indent:2em">第二种方法（在第一种方法失效时使用）：</p>
+        <p style="text-indent:2em">请下载Trixie并安装&nbsp;&nbsp;<a href="http://www.bhelpuri.net/Trixie/TrixieSetup.msi" target="_blank">下载地址</a>&nbsp;&nbsp;（此软件已经4年没有更新了，可能会比上面一种方法出现更多的问题）</p>
+        <p style="text-indent:2em">Trixie安装完成后，请访问<a href="https://greasyfork.org/scripts/2367-hitgpacalc" target="_blank">https://greasyfork.org/scripts/2367-hitgpacalc</a>,点击左上角的Install，下载这个文件，将其保存在C:/Program Files/Bhelpuri/Trixie/Scripts/文件夹下。打开IE浏览器，启用Trixie加载项，点击工具>Trixie Option（若找不到工具请按以下alt键即可找到）,打开Trixie的设置界面，稍等半分钟，再打开Trixie Option，在脚本HITGPACALC上打勾。</p>
+        <p style="text-align:left; text-indent:2em">以上设置完成后，访问教务处查分的网页，会在网页右侧自动弹出一个计算学分绩的框，选择要计算的课程后点击"计算学分绩"按钮即可。点击"关闭学分绩计算器"按钮则可以关闭它。刷新后界面会重新出现。如果出错请发E-mail或留言联系我。</p>
+    </div>
+    <div style="background-color:#000; border:5px solid; border-color:#000; color:#FFF">
+    	<p>360/搜狗/傲游 浏览器：</p>
+        <p style="text-indent:2em">很遗憾，您的浏览器不支持userjs或设置比较复杂，要是您有兴趣，请访问<a href="http://www.guokr.com/blog/57177/" target="_blank">http://www.guokr.com/blog/57177/</a>自行琢磨研究。</p>
+		<p>safari 浏览器：</p>
+        <p style="text-indent:2em">请安装NinjaKit或类似扩展。</p>
+    </div>     
+</div>
+<!-- <div style="margin:20px; width:200px; text-align:center; position:absolute; top:0; right:0;>
+   	<form method="POST" name="messageform" action="">
+		<p align="left" style="text-indent:2em font-size:14px !important"><em style="color:#F00"><strong>推荐使用左侧的Email地址与我联系。</strong></em>留言板是匿名的，所以我无法对您的问题作出反馈。</p>
+        <h3 align="center">留言板(unavailable)</h3>
+        <p><textarea rows="5" name="msgbox" cols="25"></textarea></p>
+		<p><input type="submit" value="给我留言" name="B2"></p>
+		</form>
+</div> -->
+<div style="margin:20px; width:200px; text-align:center; position:absolute; top:0; left:0; font-size:14px !important">
+	<p align="left">更新日志：</p>
+    <p align="left" style="text-indent:2em">2013.08.21    V1.5</p>
+    <p align="left" style="text-indent:2em">支持VPN校内查询，对新版校外查询做了调整。</p>
+	<p align="left" style="text-indent:2em">2013.03.02    V1.4</p>
+    <p align="left" style="text-indent:2em">进行微调，适应改版后的教务系统；增加展开和折叠的功能。</p>
+    <p align="left" style="text-indent:2em">2012.09.08    V1.3</p>
+    <p align="left" style="text-indent:2em">校内查询可以记住勾选课程以便下次使用。</p>
+    <p align="left" style="text-indent:2em">2012.06.15    V1.2</p>
+    <p align="left" style="text-indent:2em">增加GPA计算的功能；优化了课程的勾选，增加全选/全不选/选择高学分课程的按钮。</p>
+	<p align="left" style="text-indent:2em">2012.05.11    V1.1</p>
+    <p align="left" style="text-indent:2em">支持教务处的校外查询</p>
+    <p align="left" style="text-indent:2em">2012.05.06    V1.0.1</p>
+    <p align="left" style="text-indent:2em">改进信息抓取方式，解决学分和学分绩对不上的问题，解决挂科出错问题，添加异常处理机制。</p>
+    <p align="left" style="text-indent:2em">2012.05.05    V1.0.0</p>
+    <p align="left" style="text-indent:2em">脚本发布</p>
+    <p align="left">脚本说明：</p>
+    <p align="left" style="text-indent:2em">脚本的原理是利用正则表达式分析所需信息的上下文将其提取出来，感兴趣的同学可以把脚本下载下来研究。</p>
+    <p align="left" style="text-indent:2em">因为是使用正则表达式抓取数据，难免会有疏漏和错误。如果在计算你的学分绩时并没有出现所有科目或显示不正常，请把问题反馈给我。如果不介意个人隐私的话，可以把右键——查看网页源代码 里面的东西复制到文本文件里（可把姓名和学号用XXXX代替），然后和问题描述一起打包发送到GroundMelon@gmail.com，这样可以使这个脚本更加完善。</p>
+</div>    
+<script type="text/javascript">
+    var winWidth = 0;
+	var winHeight = 0;
+	var x;
+	function findDimensions() //函数：获取尺寸
+	{
+		 //获取窗口宽度
+		 if (window.innerWidth)
+			   winWidth = window.innerWidth;
+		 else if ((document.body) && (document.body.clientWidth))
+			   winWidth = document.body.clientWidth;
+		 //获取窗口高度
+		 if (window.innerHeight)
+			   winHeight = window.innerHeight;
+		 else if ((document.body) && (document.body.clientHeight))
+			   winHeight = document.body.clientHeight;
+	   
+		 //通过深入Document内部对body进行检测，获取窗口大小
+		 if (document.documentElement  && document.documentElement.clientHeight &&
+											  document.documentElement.clientWidth)
+		 {
+			 winHeight = document.documentElement.clientHeight;
+			 winWidth = document.documentElement.clientWidth;
+		 }
+		 x=""+(winWidth-480)+"px";
+		 document.getElementById("main").style.width=x;
+	}
+	findDimensions();                  //调用函数，获取数值
+	window.onresize=findDimensions;
+</script>
+</body>
+</html>
